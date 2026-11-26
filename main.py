@@ -34,6 +34,7 @@ def validate(text: str) -> None:
     assert "\n" not in text, "one line only"
     assert text.count(".") == 1 and text.endswith("."), "one sentence"
     assert sum(text.count(c) for c in ".!?") == 1, "one sentence terminator"
+    assert "  " not in text, "gate: no double spaces"
 
 
 def main() -> None:
